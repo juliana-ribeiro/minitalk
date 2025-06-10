@@ -6,13 +6,13 @@
 /*   By: juribeir <juribeir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:33:41 by juribeir          #+#    #+#             */
-/*   Updated: 2025/06/09 21:43:08 by juribeir         ###   ########.fr       */
+/*   Updated: 2025/06/10 00:15:31 by juribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <signal.h>
 #include <unistd.h>
-#include "../libft/libft.h"
+#include "minitalk.h"
 
 void	handle_signal(int sig)
 {
@@ -39,7 +39,7 @@ int	main(void)
 
 	pid_str = ft_itoa(getpid());
 	sa.sa_handler = handle_signal;
-	sa.sa_flags = SA_SIGINFO | SA_RESTART;
+	sa.sa_flags = SA_RESTART;
 	sigemptyset(&sa.sa_mask);
 	write(1, "Server PID: ", 12);
 	write(1, pid_str, ft_strlen(pid_str));
