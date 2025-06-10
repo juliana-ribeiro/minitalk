@@ -6,13 +6,13 @@
 /*   By: juribeir <juribeir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:27:27 by juribeir          #+#    #+#             */
-/*   Updated: 2025/06/09 21:44:00 by juribeir         ###   ########.fr       */
+/*   Updated: 2025/06/10 01:42:29 by juribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <signal.h>
 #include <unistd.h>
-#include "../libft/libft.h"
+#include "minitalk.h"
 
 void	send_char(pid_t pid, char c)
 {
